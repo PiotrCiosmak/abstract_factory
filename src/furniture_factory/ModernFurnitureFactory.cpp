@@ -2,12 +2,12 @@
 #include "../../include/chair/ModernChair.hpp"
 #include "../../include/table/ModernTable.hpp"
 
-Chair* ModernFurnitureFactory::createChair() const
+std::shared_ptr<Chair> ModernFurnitureFactory::createChair() const
 {
-    return new ModernChair();
+    return std::make_shared<ModernChair>();
 }
 
-Table* ModernFurnitureFactory::createTable() const
+std::shared_ptr<Table> ModernFurnitureFactory::createTable() const
 {
-    return new ModernTable();
+    return std::make_shared<ModernTable>();
 }

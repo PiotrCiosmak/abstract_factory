@@ -5,6 +5,6 @@
 class VictorianTable : public Table
 {
 public:
-    std::string getUpOn() const override;
-    int getNumberOfSeats() const override;
+    [[nodiscard]] std::string getUpOn() const override;
+    [[nodiscard]] int getNumberOfSeats() const override;
 };

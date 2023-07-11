@@ -5,9 +5,7 @@
 class Chair
 {
 public:
-    virtual std::string sitOn() const = 0;
-    virtual int getNumberOfLegs() const = 0;
-
-    virtual ~Chair()
-    {};
+    [[nodiscard]] virtual std::string sitOn() const = 0;
+    [[nodiscard]] virtual int getNumberOfLegs() const = 0;
+    virtual ~Chair() = default;
 };

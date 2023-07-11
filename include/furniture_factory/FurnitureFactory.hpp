@@ -6,6 +6,6 @@
 class FurnitureFactory
 {
 public:
-    virtual Chair* createChair() const = 0;
-    virtual Table* createTable() const = 0;
+    [[nodiscard]] virtual std::shared_ptr<Chair> createChair() const = 0;
+    [[nodiscard]] virtual std::shared_ptr<Table> createTable() const = 0;
 };

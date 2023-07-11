@@ -2,12 +2,12 @@
 #include "../../include/chair/VictorianChair.hpp"
 #include "../../include/table/VictorianTable.hpp"
 
-Chair* VictorianFurnitureFactory::createChair() const
+std::shared_ptr<Chair> VictorianFurnitureFactory::createChair() const
 {
-    return new VictorianChair();
+    return std::make_shared<VictorianChair>();
 }
 
-Table* VictorianFurnitureFactory::createTable() const
+std::shared_ptr<Table> VictorianFurnitureFactory::createTable() const
 {
-    return new VictorianTable();
+    return std::make_shared<VictorianTable>();
 }

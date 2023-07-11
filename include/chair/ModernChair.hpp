@@ -5,6 +5,6 @@
 class ModernChair : public Chair
 {
 public:
-    std::string sitOn() const override;
-    int getNumberOfLegs() const override;
+    [[nodiscard]] std::string sitOn() const override;
+    [[nodiscard]] int getNumberOfLegs() const override;
 };
